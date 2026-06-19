@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h1>Login form</h1>
+    <form>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+      </div>
+      <!-- form tags -->
+      <div>
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="color"
+          >color</label>
+          <input type="color" id="color" />
+        </label>
+      </div>
+      <div>
+        <label for="date">Date of Birth</label>
+        <input type="date" id="date" name="date" />
+      </div>
+
+      <div>
+        <label for="file">Upload file</label>
+        <input type="file" id="file" name="file" />
+      </div>
+      <div>
+        <label for="range">Range</label>
+        <input type="range" id="range" name="range" min="0" max="100" />
+      </div>
+      <div>
+        <label for="checkbox">Accept terms and conditions</label>
+        <input type="checkbox" id="checkbox" name="checkbox" />
+      </div>
+      <div>
+        <label for="radio">Gender</label>
+        <input type="radio" id="radio1" name="gender" value="male" />
+        <label for="radio1">Male</label>
+        <input type="radio" id="radio2" name="gender" value="female" />
+        <label for="radio2">Female</label>
+      </div>
+      <div>
+        <button type="submit">Login</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+
+    <!-- second form -->
+     <div>
+      <h2>Learning form</h2>
+      <form >
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email"  required/>
+
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div>
+          <label for="url">Website</label>
+          <input type="url" name="url" id="url">
+        </div>
+        <div>
+          <button type="submit">Login</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+     </div>
+  </body>
+</html>
