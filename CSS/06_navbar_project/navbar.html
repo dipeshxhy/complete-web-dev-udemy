@@ -235,6 +235,44 @@
         /* color: #03643c; */
         border: 1px solid #78ddb1;
       }
+
+      /* nav3 */
+      .nav3 {
+        background-color: #45a2bb;
+        padding: 10px;
+      }
+      .nav3 ul {
+        display: flex;
+        justify-content: space-around;
+      }
+      .dropdown {
+        position: relative;
+      }
+      .dropdown-content {
+        display: none;
+        opacity: 0;
+        position: absolute;
+        background-color: #3e3e3e;
+        min-width: 150px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .dropdown-content a {
+        display: block;
+        padding: 8px;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+      .dropdown-content a:hover {
+        background-color: #78ddb1;
+        color: #03643c;
+        border-radius: 5px;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+        opacity: 1;
+      }
     </style>
   </head>
   <body>
@@ -268,7 +306,7 @@
         <ul>
           <li><a href="#">Home</a></li>
           <li class="dropdown">
-            <a href="#">About</a>
+            <a href="#" id="about">About</a>
             <div class="dropdown-content">
               <a href="#">Our Story</a>
               <a href="#">Team</a>
