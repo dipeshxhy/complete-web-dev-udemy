@@ -192,6 +192,22 @@
         width: 100%;
       }
 
+      .nav3 a::after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 0%;
+        bottom: 0;
+        left: 0;
+        background-color: #0a65c7;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+      .nav3 a:hover::after {
+        transform: scaleX(1);
+        width: 100%;
+      }
+
       /* vertical Nav */
       .nav2 {
         background-color: #03643c;
