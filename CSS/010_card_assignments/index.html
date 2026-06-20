@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nike Shoe | Card</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-neutral-300 h-screen w-full flex items-center justify-center">
+    <div
+      class="container max-w-7xl mx-auto h-[60vh] w-full bg-gradient-to-b from-purple-700/80 to-indigo-400/70 shadow-md rounded-md text-white relative overflow-hidden"
+    >
+      <div class="grid grid-cols-1 h-full md:grid-cols-2 grid-rows-1 gap-4">
+        <!-- left part -->
+        <div class="w-full h-full">
+          <img
+            class="w-full h-full object-cover"
+            src="https://images.unsplash.com/photo-1656164753657-8ff832063a71?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="nike shoe"
+          />
+        </div>
+        <!-- end left part -->
+        <!-- right part -->
+        <div class="w-full h-full p-6 flex flex-col justify-between">
+          <div>
+            <h1 class="text-4xl uppercase tracking-wide font-bold">
+              Nike Shoe
+            </h1>
+            <p class="mt-4 text-neutral-100 text-md">
+              Experience the perfect blend of style and performance with our
+              latest Nike shoe design. Crafted with cutting-edge technology and
+              premium materials, this shoe offers unparalleled comfort and
+              support for athletes and sneaker enthusiasts alike. Whether you're
+              hitting the gym or making a fashion statement, our Nike shoe is
+              designed to elevate your game and turn heads wherever you go.
+            </p>
+          </div>
+          <!-- top seller -->
+          <div
+            class="absolute top-0 right-0 bg-yellow-400/80 px-3 py-1 rounded-md shadow-md"
+          >
+            <h2
+              class="text-xl font-black uppercase text-center text-orange-800"
+            >
+              Top Seller
+            </h2>
+          </div>
+          <!-- price -->
+          <div class="text-3xl font-bold mt-4 text-green-400">$129.99</div>
+          <div class="h-1/2 flex flex-col justify-center">
+            <div class="flex justify-between items-center gap-5">
+              <div class="flex-1">
+                <select
+                  name="size"
+                  id=""
+                  class="bg-cyan-500 text-gray-800 placeholder:text-gray-500 border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-md px-3 py-2 w-full"
+                >
+                  <option value="">Select Size</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                </select>
+              </div>
+              <div class="flex-1">
+                <select
+                  name="quantity"
+                  id=""
+                  class="bg-cyan-500 text-gray-800 placeholder:text-gray-500 border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-md px-3 py-2 w-full"
+                >
+                  <option value="">Quantity</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+            <button
+              class="mt-6 bg-red-600 hover:bg-red-700 text-white font-bold py-3 uppercase duration-300 transition-all cursor-pointer rounded w-full"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <!-- end right part -->
+      </div>
+    </div>
+  </body>
+</html>
