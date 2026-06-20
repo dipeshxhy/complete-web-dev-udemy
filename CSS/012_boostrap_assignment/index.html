@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boostraphy Youtube Video</title>
+    <!-- boostrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+      .carousel-item > img {
+        height: 50vh;
+        object-position: center;
+        object-fit: cover;
+      }
+
+      .card  {
+        min-height: 300px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body class="bg-dark text-white">
+    <!-- carousel -->
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://images.pexels.com/photos/18681382/pexels-photo-18681382.jpeg?_gl=1*1y6p5rz*_ga*NjU1MjA4NzU1LjE3NzYwNTk0MjA.*_ga_8JE65Q40S6*czE3ODE5NTAwMTEkbzckZzEkdDE3ODE5NTAyNTEkajE2JGwwJGgw"
+            class="d-block w-100"
+            alt="coding photo"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://images.pexels.com/photos/13847596/pexels-photo-13847596.jpeg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://images.pexels.com/photos/7775641/pexels-photo-7775641.jpeg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- end carousel -->
+
+    <main > 
+      <div >
+        <h2 class="my-4  text-center text-uppercase text-dark p-3 " style="background-color: #F0B112;" >Best Videos to watch 🎉</h2>
+        <section class="container" >
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col ">
+              <div class="card">
+                <img
+                  src="https://i.ytimg.com/an_webp/5YqP18Gyop0/mqdefault_6s.webp?du=3000&sqp=CI_H2dEG&rs=AOn4CLDrw0lBjieHrYzUhRR5lpAGe-eGQA"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">What is Redis and why it exists?</h5>
+                  <p class="card-text">
+                    <div class="action">
+                      <a
+                        href="https://www.youtube.com/watch?v=5YqP18Gyop0&t=245s"
+                        class="btn btn-warning w-100"
+                        target="_blank"
+                        >Watch now</a
+                      >
+                    </div>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col ">
+              <div class="card">
+                <img
+                  src="https://i.ytimg.com/vi/780Fyv-SAUk/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAfvq-jHq7DHhjn1E2WFzEcKsNulA"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Monorepo setup guide</h5>
+                  <div class="action">
+                    <a
+                      href="https://www.youtube.com/watch?v=780Fyv-SAUk"
+                      class="btn btn-warning w-100"
+                      target="_blank"
+                      >Watch now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img
+                  src="https://i.ytimg.com/an_webp/1YzNl1tkAik/mqdefault_6s.webp?du=3000&sqp=CNbV2dEG&rs=AOn4CLAxl9AcbL0Biko2_xNk76BtEQkQUA"
+                  class="card-img-top"
+                  alt="Self hosting thumbnail"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Final boss of self hosting</h5>
+                  <div class="action">
+                    <a
+                      href="https://www.youtube.com/watch?v=1YzNl1tkAik&t=318s"
+                      class="btn btn-warning w-100"
+                      target="_blank"
+                      >Watch now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-secondary text-center text-white py-4 mt-5">
+      <p class="mb-0">&copy; 2026 Dipesh Chaudary. All rights reserved.</p>
+    </footer>
+    <!-- end footer -->
+    <!-- boostrap js  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
