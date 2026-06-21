@@ -82,6 +82,6 @@ let cityList = [];
 
 for (let c = 0; c < cities.length; c++) {
   const myCity = cities[c];
-  cityList.push(myCity);
+  cityList.unshift(myCity);
 }
 console.log(cityList);
