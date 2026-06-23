@@ -44,7 +44,7 @@ function getWeather(lat, lon) {
   fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       // Display weather information
       weatherInfoContainer.classList.remove('hidden');
       weatherInfoContainer.innerHTML = `
