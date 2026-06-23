@@ -15,7 +15,7 @@ function displayError(message) {
   errorMessageContainer.innerHTML = `<p>${message}</p>`;
 }
 function geoCoding(city) {
-  const apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API_KEY}`;
+  const apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API_KEY}`;
 
   fetch(apiUrl)
     .then((response) => response.json())
