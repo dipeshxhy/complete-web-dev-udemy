@@ -1,5 +1,12 @@
 import cors from "cors";
 import express from "express";
+import morgan from "morgan";
+
+import { ApiError } from "./utils/api-error.js";
+
+// routers
+import healthCheckRouter from "./routes/healthcheck.routes.js";
+import { errorHandler } from "./middlewares/error-handler.js";
 
 const app = express();
 
@@ -21,8 +28,20 @@ app.use(
   }),
 );
 
+// morgan logger
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
+}
+
 app.get("/", (req, res) => {
   res.send("welcome to base camp project");
 });
 
+// api
+app.use("/api/v1/healthcheck", healthCheckRouter);
+
+app.all("/*splat", (req, res) => {
+  throw ApiError.notFound(`Route ${req.originalUrl} not found`);
+});
+app.use(errorHandler);
 export default app;
