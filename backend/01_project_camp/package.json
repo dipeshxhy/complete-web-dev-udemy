@@ -1,0 +1,24 @@
+{
+  "name": "project_camp",
+  "version": "1.0.0",
+  "description": "The project camp management for beginners",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "project camp",
+    "management",
+    "beginners",
+    "backend"
+  ],
+  "author": "Dipesh Chaudhary",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.2",
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "prettier": "3.8.4"
+  }
+}
