@@ -14,7 +14,7 @@ const mailGenerator = new mailgen({
   theme: "default",
   product: {
     name: "product Camp",
-    link: "<noreply@productcamp.com>",
+    link: "https://productcamp.com",
   },
 });
 
@@ -61,7 +61,11 @@ const sendEmail = async (to, subject, html, text) => {
   }
 };
 
-export const emailVerificationTemplate = (userName, email, verificationUrl) => {
+export const emailVerificationTemplate = async (
+  userName,
+  email,
+  verificationUrl,
+) => {
   const message = "Welcome to Product Camp! Please verify your email address.";
   const { html, text } = generateEmailTemplate(
     userName,
@@ -70,10 +74,10 @@ export const emailVerificationTemplate = (userName, email, verificationUrl) => {
     message,
     "#22BC66",
   );
-  sendEmail(email, "Email Verification", html, text);
+  await sendEmail(email, "Email Verification", html, text);
 };
 
-export const forgotPasswordTemplate = (userName, email, resetUrl) => {
+export const forgotPasswordTemplate = async (userName, email, resetUrl) => {
   const message = "You have requested to reset your password.";
   const { html, text } = generateEmailTemplate(
     userName,
@@ -82,5 +86,5 @@ export const forgotPasswordTemplate = (userName, email, resetUrl) => {
     message,
     "#FF6B6B",
   );
-  sendEmail(email, "Forgot Password", html, text);
+  await sendEmail(email, "Forgot Password", html, text);
 };

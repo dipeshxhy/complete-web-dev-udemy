@@ -6,6 +6,7 @@ import { ApiError } from "./utils/api-error.js";
 
 // routers
 import healthCheckRouter from "./routes/healthcheck.routes.js";
+import authRouter from "./routes/auth.routes.js";
 import { errorHandler } from "./middlewares/error-handler.js";
 
 const app = express();
@@ -39,7 +40,7 @@ app.get("/", (req, res) => {
 
 // api
 app.use("/api/v1/healthcheck", healthCheckRouter);
-
+app.use("/api/v1/auth", authRouter);
 app.all("/*splat", (req, res) => {
   throw ApiError.notFound(`Route ${req.originalUrl} not found`);
 });

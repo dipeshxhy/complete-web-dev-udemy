@@ -1,7 +1,8 @@
-import mongoose, { Schema } from "mongoose";
 import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
 import crypto from "crypto";
+import jwt from "jsonwebtoken";
+import mongoose, { Schema } from "mongoose";
+import { UserRolesEnum } from "../utils/constants.js";
 
 const userSchema = new Schema(
   {
@@ -44,6 +45,15 @@ const userSchema = new Schema(
     isEmailVerified: {
       type: Boolean,
       default: false,
+    },
+    role: {
+      type: String,
+      enum: [
+        UserRolesEnum.ADMIN,
+        UserRolesEnum.MEMBER,
+        UserRolesEnum.PROJECT_ADMIN,
+      ],
+      default: UserRolesEnum.MEMBER,
     },
     refreshToken: { type: String, default: null },
     forgotPasswordToken: { type: String, default: null },
