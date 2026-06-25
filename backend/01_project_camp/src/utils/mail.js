@@ -1,4 +1,14 @@
 import mailgen from "mailgen";
+import nodemailer from "nodemailer";
+
+const transport = nodemailer.createTransport({
+  host: process.env.MAILTRAP_HOST,
+  port: process.env.MAILTRAP_PORT,
+  auth: {
+    user: process.env.MAILTRAP_USER,
+    pass: process.env.MAILTRAP_PASSWORD,
+  },
+});
 
 const mailGenerator = new mailgen({
   theme: "default",
@@ -30,28 +40,47 @@ const generateEmailTemplate = (
       outro: "If you did not request this, please ignore this email.",
     },
   };
+  const html = mailGenerator.generate(email);
+  const text = mailGenerator.generatePlaintext(email);
+  return { html, text };
+};
+const sendEmail = async (to, subject, html, text) => {
+  const mailOptions = {
+    from: process.env.MAILTRAP_FROM,
+    to,
+    subject,
+    html,
+    text,
+  };
 
-  return mailGenerator.generate(email);
+  try {
+    await transport.sendMail(mailOptions);
+  } catch (error) {
+    console.error("Error sending email:", error);
+    throw new Error("Failed to send email");
+  }
 };
 
-export const emailVerificationTemplate = (userName, verificationUrl) => {
+export const emailVerificationTemplate = (userName, email, verificationUrl) => {
   const message = "Welcome to Product Camp! Please verify your email address.";
-  return generateEmailTemplate(
+  const { html, text } = generateEmailTemplate(
     userName,
     verificationUrl,
     "Verify Email",
     message,
     "#22BC66",
   );
+  sendEmail(email, "Email Verification", html, text);
 };
 
-export const forgotPasswordTemplate = (userName, resetUrl) => {
+export const forgotPasswordTemplate = (userName, email, resetUrl) => {
   const message = "You have requested to reset your password.";
-  return generateEmailTemplate(
+  const { html, text } = generateEmailTemplate(
     userName,
     resetUrl,
     "Reset Your Password",
     message,
     "#FF6B6B",
   );
+  sendEmail(email, "Forgot Password", html, text);
 };
