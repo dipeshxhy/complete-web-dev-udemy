@@ -12,4 +12,9 @@ export class ApiResponse {
       .status(HttpStatusCodes.OK)
       .json(new ApiResponse(HttpStatusCodes.OK, data, message));
   }
+  static created(res, data = null, message = "created") {
+    return res
+      .status(HttpStatusCodes.CREATED)
+      .json(new ApiResponse(HttpStatusCodes.CREATED, data, message));
+  }
 }
