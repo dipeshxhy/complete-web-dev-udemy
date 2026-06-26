@@ -22,7 +22,7 @@ const subTaskSchema = new Schema(
       required: [true, "Created by is required"],
     },
   },
-  { timestamps: true, discriminatorKey: "kind" },
+  { timestamps: true },
 );
 
 const SubTask = mongoose.model("SubTask", subTaskSchema);
