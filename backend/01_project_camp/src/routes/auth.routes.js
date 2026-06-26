@@ -9,4 +9,8 @@ router
   .route("/register")
   .post(validator(validate.registerUserInputSchema), authController.register);
 
+router
+  .route("/login")
+  .post(validator(validate.loginUserInputSchema), authController.login);
+
 export default router;

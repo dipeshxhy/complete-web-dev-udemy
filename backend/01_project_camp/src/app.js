@@ -1,6 +1,7 @@
 import cors from "cors";
 import express from "express";
 import morgan from "morgan";
+import cookieParser from "cookie-parser";
 
 import { ApiError } from "./utils/api-error.js";
 
@@ -28,6 +29,8 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization", "Accept"],
   }),
 );
+// cookie parser
+app.use(cookieParser());
 
 // morgan logger
 if (process.env.NODE_ENV === "development") {
