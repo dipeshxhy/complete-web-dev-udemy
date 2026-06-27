@@ -3,12 +3,12 @@ import { AvailableUserRoles, UserRolesEnum } from "../utils/constants.js";
 
 const projectMemberSchema = new Schema(
   {
-    user: {
+    users: {
       type: Schema.Types.ObjectId,
       ref: "User",
       required: [true, "User member is required"],
     },
-    project: {
+    projects: {
       type: Schema.Types.ObjectId,
       ref: "Project",
       required: [true, "Project is required"],
