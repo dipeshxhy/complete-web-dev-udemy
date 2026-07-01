@@ -14,7 +14,7 @@ const getProjects = async (req, res) => {
     {
       $lookup: {
         from: "projects",
-        localField: "projects",
+        localField: "project",
         foreignField: "_id",
         as: "projects",
         pipeline: [
@@ -22,7 +22,7 @@ const getProjects = async (req, res) => {
             $lookup: {
               from: "projectmembers",
               localField: "_id",
-              foreignField: "projects",
+              foreignField: "project",
               as: "projectmembers",
             },
           },
@@ -150,7 +150,7 @@ const getProjectMembers = async (req, res) => {
     {
       $lookup: {
         from: "users",
-        localField: "users",
+        localField: "user",
         foreignField: "_id",
         as: "user",
         pipeline: [
